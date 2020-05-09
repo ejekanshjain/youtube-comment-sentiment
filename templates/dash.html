@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<style>
+  .progress {
+  height: 35px;
+
+}
+.progress .skill {
+  font: normal 12px "Open Sans Web";
+  line-height: 35px;
+  padding: 0;
+  margin: 0 0 0 20px;
+  text-transform: uppercase;
+}
+.progress .skill .val {
+  float: right;
+  font-style: normal;
+  margin: 0 20px 0 0;
+}
+
+.progress-bar {
+  text-align: left;
+  transition-duration: 3s;
+}
+</style>
+
+<script>
+   $(document).ready(function() {
+      $('.progress .progress-bar').css("width",
+                function() {
+                    return $(this).attr("aria-valuenow") + "%";
+                }
+        )
+    });
+
+</script>
+<!--<link href="C:/Users/HP/PycharmProjects/youtube/static/dash_style.css" type="text/css" rel="stylesheet">-->
+<!--<script src="C:/Users/HP/PycharmProjects/youtube/static/dash.js"></script>-->
+
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+<div class="container">
+	<div class="row">
+<!--    <h2>{{channel}}{{video}} <a href="http://gridgum.com/author/agez" target="_blank">agez</a></h2>-->
+        <h2>
+            Channel Name : {{channel}}
+        </h2>
+<!--        <h2>-->
+<!--            <a href={{video}} target="_blank">Video Link</a>-->
+<!--        </h2>-->
+		 <!-- Skill Bars -->
+            <div class="progress skill-bar ">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow={{Positive}} aria-valuemin="0" aria-valuemax="100">
+                    <span class="skill">Positive <i class="val">{{Positive}}%</i></span>
+                </div>
+            </div>
+
+            <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow={{Negative}} aria-valuemin="0" aria-valuemax="100" >
+                    <span class="skill">Negative<i class="val">{{Negative}}%</i></span>
+                </div>
+            </div>
+
+            <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow={{Neutral}} aria-valuemin="0" aria-valuemax="100">
+                    <span class="skill">Neutral<i class="val">{{Neutral}}%</i></span>
+                </div>
+            </div>
+            <div>
+                <iframe width="420" height="315" src={{videoID}}>
+                </iframe>
+            </div>
+
+<!--            <div class="progress skill-bar">-->
+<!--                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">-->
+<!--                    <span class="skill">Photoshop<i class="val">{{Likes}}%</i></span>-->
+<!--                </div>-->
+<!--            </div>-->
+
+	</div>
+</div>
+
+</body>
+</html>
