@@ -10,7 +10,7 @@ import sys
 
 
 
-server = Flask(__name__)
+server = Flask(__name__, template_folder='templates')
 
 
 @server.route("/")
