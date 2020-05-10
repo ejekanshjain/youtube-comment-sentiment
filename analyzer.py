@@ -1,12 +1,13 @@
 import pandas as pd
-
+import nltk
+nltk.data.path.append('C:/Users/HP/AppData/Roaming/nltk_data')
 import datetime
 from datetime import datetime
 
 from youtube_api import YouTubeDataAPI
 import os
 import googleapiclient.discovery
-import nltk
+
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 # import matplotlib.pyplot as plt
 

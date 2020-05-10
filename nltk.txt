@@ -1,0 +1,4 @@
+corpora
+tokenize
+stem
+setiment
