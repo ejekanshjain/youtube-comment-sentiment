@@ -1,4 +1,2 @@
 corpora
-tokenize
-stem
-setiment
+setiment-vader
