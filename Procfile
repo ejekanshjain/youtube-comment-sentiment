@@ -1,1 +1,1 @@
-web: gunicorn -w 2 main:server
+web: python main.py
