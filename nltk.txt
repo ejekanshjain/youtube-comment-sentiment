@@ -1,2 +1,6 @@
 corpora
+wordnet
+pros_cons
+reuters
+vader_lexicon
 setiment-vader
